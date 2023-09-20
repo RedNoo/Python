@@ -9,7 +9,7 @@ def sum_function():
     print("sum function worked")
 
 button1 = tk.Button(form, text= "Click Me", command=sum_function)
-button1.pack()
+button1.pack(side=tk.LEFT)
 
 
 
