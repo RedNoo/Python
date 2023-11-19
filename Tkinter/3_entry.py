@@ -1,12 +1,7 @@
-import tkinter as tk
+from tkinter import *
 
 
-form = tk.Tk()
+window = Tk()
 
-form.title("Entry")
-form.geometry("500x450")
 
-input = tk.Entry()
-input.pack()
-
-form.mainloop()
+window.mainloop()
