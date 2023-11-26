@@ -1,28 +1,19 @@
 class Solution:
     def romanToInt(self, s: str) -> int:
-        roman = {"I": 1,
-                 "V": 5,
-                 "X": 10,
-                 "L": 50,
-                 "C": 100,
-                 "D": 500,
-                 "M": 1000,
-                 }
+        roman = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+        x1 = {"I": "V,X", "X": "L,C", "C": "D,M"}
 
-        checkLetter = ""
+        tempTotal = ""
         val = []
         total = 0
 
         for i in s:
-
-            if i == "I":
-                if checkLetter == "":
-                    checkLetter = i
-                elif checkLetter == i:
-                    val.append(roman[checkLetter])
-                    checkLetter = i
-            elif i == "V":
-                 pass
+            if i in x1:
+                print("true")
+                print(i)
+            else:
+                print("false")
+                print(i)
 
         total = sum(val)
 
@@ -30,4 +21,4 @@ class Solution:
 
 
 s = Solution()
-print(s.romanToInt("VI"))
+print(s.romanToInt("IV"))
