@@ -7,14 +7,24 @@ def submit():
 
 window = Tk()
 
+image = PhotoImage(file="warehouse.png")
+label = Label(image=image)
+label.pack()
+
 scale = Scale(window,
-              from_=0,
-              to=200,
+              from_=1000,
+              to=150,
               length=600,
               orient=VERTICAL,
+              font=("Verdana",20),
+              tickinterval=10,
+              #showvalue=0,
+              troughcolor='#69eaff',
+              fg="#ff1c00"
 
 
               )
+scale.set(((scale["from"] - scale["to"])/2) +scale["to"])
 scale.pack()
 
 button = Button(window,
