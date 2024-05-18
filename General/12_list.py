@@ -1,3 +1,4 @@
+#Lists : ordered, mutable, allowa dublicate elements
 food = ["pizza", "hamburger", "hotgod", "spaghetti"]
 food[0] = "sushi"
 print(food[0])
